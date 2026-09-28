@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/free-icon-web-3694372.png" />
+  <title>Pygame, популярная библиотека в Python</title>
+</head>
+<body>
+  <header>
+    <a href="index.html">Главная</a>
+    <div class="header_contact_box">
+      <input class="non_checkbox" type="checkbox" id="toggle-3">
+      <label class="header_text_label" for="toggle-3">Настройки</label>
+      <div class="contack_container">
+        <label class="close_window" for="toggle-3">
+          <img class="img_block_info" src="img/close_windows.png">
+        </label>
+        <p style="margin-top: 5px;">Я не владею javascript</p>
+        <img class="header_mem" src="img/mem_cat_2.webp">
+      </div>
+    </div>
+    <a class="header_text_label" href="about_me.html">Автор</a>
+    <div class="header_contact_box">
+      <input class="non_checkbox" type="checkbox" id="toggle-1">
+      <label class="header_text_label" for="toggle-1">Контакты</label>
+      <div class="contack_container">
+        <label class="close_window" for="toggle-1">
+          <img class="img_block_info" src="img/close_windows.png">
+        </label>
+        <p style="margin-right: 40px;">EMAIL: ferymgan@gmail.com</p>
+        <p>TEL: +7(123)123-12-12</p>
+      </div>
+    </div>
+  </header>
+  <div class="header_min_720px">
+    <a href="index.html"><img class="icons_header" src="img/home.png"></a>
+    <div class="header_contact_box">
+      <input class="non_checkbox" type="checkbox" id="min-toggle-1">
+      <label class="header_text_label" for="min-toggle-1"><img class="icons_header" src="img/sitings.png"></label>
+      <div class="contack_container">
+        <label class="close_window" for="min-toggle-1">
+          <img class="img_block_info" src="img/close_windows.png">
+        </label>
+        <p style="margin-top: 5px;">Я не владею javascript</p>
+        <img class="header_mem" src="img/mem_cat_2.webp">
+      </div>
+    </div>
+    <a href="about_me.html"><img class="icons_header" src="img/infa.png"></a>
+    <div class="header_contact_box">
+      <input class="non_checkbox" type="checkbox" id="min-toggle-2">
+      <label class="header_text_label" for="min-toggle-2"><img class="icons_header" src="img/contact.png"></label>
+      <div class="contack_container">
+        <label class="close_window" for="min-toggle-2">
+          <img class="img_block_info" src="img/close_windows.png">
+        </label>
+        <p style="margin-right: 40px;">EMAIL: ferymgan@gmail.com</p>
+        <p>TEL: +7(123)123-12-12</p>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Что такое Pygame</h2>
+    <p><strong>Pygame</strong> — это популярная библиотека для языка программирования Python, предназначенная для создания 2D‑игр и мультимедийных приложений. Она построена на базе библиотеки SDL (Simple DirectMedia Layer) и предоставляет удобный интерфейс для работы с графикой, звуком, вводом с клавиатуры и мыши, а также для управления временем и анимацией.</p>
+    <p>Pygame подходит как для обучения основам программирования через создание игр, так и для разработки полноценных инди‑проектов. Благодаря простоте освоения и богатому функционалу она завоевала любовь начинающих разработчиков и образовательных учреждений.</p>
+    <h2>Установка Pygame</h2>
+    <p>Чтобы начать работу с Pygame, сначала установите её через менеджер пакетов <strong>pip</strong>:</p>
+    <div class="redactor_text"><p>pip <span class="blue_text">install</span> pygame</p></div>
+    <p>После установки проверьте корректность установки, запустив следующий код:</p>
+    <div class="redactor_text">
+      <p><span class="blue_text">import</span> pygame</p>
+      <p>pygame.init()</p>
+      <p><span class="blue_text">print</span>("<span class="orange_text">Pygame успешно установлен</span>!")</p>
+    </div>
+    <p>Если сообщение появилось без ошибок, библиотека готова к использованию.</p>
+    <h2>Основные компоненты Pygame</h2>
+    <ol>
+      <li>
+        <h3>Инициализация и завершение</h3>
+        <p>Перед использованием любых модулей Pygame необходимо вызвать функцию pygame.init(). Она инициализирует все подсистемы библиотеки. Для корректного завершения работы приложения используйте pygame.quit():</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p>pygame.init()</p>
+      <p style="color: lightgreen;"># ваш код игры</p>
+      <p>pygame.quit()</p>
+    </div>
+    <ol start="2">
+      <li>
+        <h3>Окно игры (Display)</h3>
+        <p>Для создания графического окна используется модуль pygame.display. Пример создания окна размером 800×600 пикселей:</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p>screen = pygame.display.set_mode((<span class="int_text">800, 600</span>))</p>
+      <p>pygame.display.set_caption("<span class="orange_text">Моя первая игра</span>")</p>
+    </div>
+    <ol start="3">
+      <li>
+        <h3>Основной игровой цикл</h3>
+        <p>Это сердце любой игры — бесконечный цикл, который обрабатывает события, обновляет состояние игры и перерисовывает экран:</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p>running = <span class="bool_text">True</span></p>
+      <p><span class="red_text">while</span> running:</p>
+      <p style="margin-left: 40px;"><span class="red_text">for</span> event <span class="red_text">in</span> pygame.event.get():</p>
+      <p style="margin-left: 80px;"><span class="red_text">if</span> event.<span class="blue_text">type</span> == pygame.QUIT:</p>
+      <p style="margin-left: 120px;">running = <span class="bool_text">False</span></p>
+      <br>
+      <p style="color: lightgreen; margin-left: 40px;"># Логика игры</p>
+      <p style="color: lightgreen; margin-left: 40px;"># Отрисовка</p>
+      <p style="margin-left: 40px;">pygame.display.flip()</p>
+    </div>
+    <ol start="4">
+      <li>
+        <h3>Обработка событий</h3>
+        <p>Pygame предоставляет удобный механизм для обработки пользовательского ввода (клавиатура, мышь) через pygame.event.get(). Примеры распространённых событий:</p>
+      </li>
+    </ol>
+    <ul>
+      <li style="margin-bottom: 10px;">pygame.QUIT — закрытие окна;</li>
+      <li style="margin-bottom: 10px;">pygame.KEYDOWN — нажатие клавиши;</li>
+      <li>pygame.MOUSEBUTTONDOWN — клик мышью.</li>
+    </ul>
+    <ol start="5">
+      <li>
+        <h3>Работа с графикой</h3>
+        <ul style="list-style-type: disc;">
+          <li><p><strong>Цвета</strong>: задаются в формате RGB, например, RED = (255, 0, 0).</p></li>
+          <li><p><strong>Фигуры</strong>: можно рисовать примитивы с помощью pygame.draw:</p></li>
+          <ul style="list-style-type: circle;">
+            <li><p>pygame.draw.rect() — прямоугольник;</p></li>
+            <li><p>pygame.draw.circle() — круг;</p></li>
+            <li><p>pygame.draw.line() — линия.</p></li>
+          </ul>
+          <li><p><strong>Изображения</strong>: загружаются через pygame.image.load() и отображаются методом blit() на экран.</p></li>
+        </ul>
+      </li>
+    </ol>
+    <ol start="6">
+      <li>
+        <h3>Работа со звуком</h3>
+        <p>Модуль pygame.mixer позволяет воспроизводить звуковые эффекты и фоновую музыку:</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p>pygame.mixer.music.load("<span class="orange_text">background.mp3</span>")</p>
+      <p>pygame.mixer.music.play(-1)  <span style="color: lightgreen;"># -1 для зацикливания</span></p>
+    </div>
+    <ol start="7">
+      <li>
+        <h3>Управление временем</h3>
+        <p>Класс pygame.time.Clock помогает контролировать частоту кадров (FPS), обеспечивая плавность анимации:</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p>clock = pygame.time.Clock()</p>
+      <p>FPS = <span class="int_text">60</span></p>
+      <br>
+      <p><span class="red_text">while</span> running:</p>
+      <p style="margin-left: 40px;">clock.tick(FPS)</p>
+      <p style="color: lightgreen; margin-left: 40px;"># остальной код</p>
+    </div>
+    <ol>
+      <li>
+        <h3>Спрайты и группы</h3>
+        <p>Спрайты (pygame.sprite.Sprite) — это объекты, представляющие игровые элементы (персонажи, враги, бонусы). Группы (pygame.sprite.Group) упрощают управление множеством спрайтов и проверку столкновений:</p>
+      </li>
+    </ol>
+    <div class="redactor_text">
+      <p><span class="red_text">class</span> <span class="func_text">Player</span>(pygame.sprite.Sprite):</p>
+      <p style="margin-left: 40px;"><span class="red_text">def</span> <span class="func_text">__init__</span>(self):</p>
+      <p style="margin-left: 80px;"><span class="blue_text">super</span>().__init__()</p>
+      <p style="margin-left: 80px;"><span class="red_text">self</span>.image = pygame.Surface((<span class="int_text">50, 50</span>))</p>
+      <p style="margin-left: 80px;"><span class="red_text">self</span>.image.fill((<span class="int_text">0, 255, 0</span>))</p>
+      <p style="margin-left: 80px;"><span class="red_text">self</span>.rect = <span class="red_text">self</span>.image.get_rect()</p>
+      <br>
+      <p>player = Player()</p>
+      <p>all_sprites = pygame.sprite.Group()</p>
+      <p>all_sprites.add(player)</p>
+    </div>
+    <h2>Преимущества Pygame</h2>
+    <ul>
+      <li><strong>Простота изучения</strong>: синтаксис Python и интуитивно понятный API Pygame позволяют быстро начать создавать игры.</li>
+      <li><strong>Кроссплатформенность</strong>: игры на Pygame работают на Windows, macOS и Linux.</li>
+      <li>Активное сообщество: множество туториалов, примеров кода и готовых решений в открытом доступе.</li>
+      <li><strong>Гибкость</strong>: подходит для создания игр разных жанров — от аркадных до пазлов и платформеров.</li>
+      <li><strong>Образовательная ценность</strong>: помогает освоить основы программирования, ООП, алгоритмы и математику (геометрию, векторы) в игровой форме.</li>
+    </ul>
+    <h2>Ограничения Pygame</h2>
+    <ul>
+      <li><strong>2D‑графика</strong>: Pygame не предназначен для создания 3D‑игр.</li>
+      <li><strong>Производительность</strong>: для сложных проектов с высокой детализацией графики Pygame может быть недостаточно быстрым.</li>
+      <li><strong>Устаревшие технологии</strong>: SDL 1.2 (на котором основана старая версия Pygame) уступает современным графическим API.</li>
+      <li><strong>Ограниченная поддержка мобильных платформ</strong>: создание игр под Android/iOS требует дополнительных инструментов и усилий.</li>
+    </ul>
+    <h2>Заключение</h2>
+    <p>Pygame — это мощный и доступный инструмент для создания 2D‑игр на Python. Он идеально подходит для:</p>
+    <ul>
+      <li>обучения программированию через создание игр;</li>
+      <li>прототипирования игровых идей;</li>
+      <li>разработки небольших инди‑проектов;</li>
+      <li>участия в гейм‑джемах (например, Ludum Dare).</li>
+    </ul>
+    <p>Освоив основы Pygame, вы получите не только навыки разработки игр, но и углубите понимание ключевых концепций программирования. Начните с простых проектов, постепенно усложняя задачи, и вы сможете создать свою уникальную игру!</p>
+  </div>
+  <div class="text_p_stat_content">
+    <p>Возможно вам будет интересно</p>
+  </div>
+  <div class="poxosh_stat_content">
+    <a class="stat_block_content" href="vs_code_plagins.html">
+      <img class="stat_obloshka_content" src="img/vs_code_obloshka.jpg">
+      <p>Топ‑10 плагинов для Visual Studio Code</p>
+      <p><span class="stat_block_content_1">делаем разработку удобнее</span></p>
+    </a>
+    <a class="stat_block_content" href="syblime_plagins.html">
+      <img class="stat_obloshka_content" src="img/syblime_text_obloshka.jpg">
+      <p>Топ‑7 плагинов для Sublime Text</p>
+      <p><span class="stat_block_content_1">Совершенствуем редактор</span></p>
+    </a>
+    <a class="stat_block_content" href="netron_stars.html">
+      <img class="stat_obloshka_content" src="img/netron_star.jpg">
+      <p>Нейтронные звёзды: космические монстры из сверхплотной материи</p>
+    </a>
+  </div>
+  <footer>
+    <div class="gorizontaly_block"></div>
+    <div class="footer_conteiner">
+      <div class="box_footer">
+        <p style="color: rgb(78, 0, 92); font-weight: 600;">Автор:</p>
+        <p>Nikov Noblerten</p>
+      </div>
+      <div class="box_footer">
+        <p style="color: rgb(78, 0, 92); font-weight: 600;">Текст:</p>
+        <p>Alica AI</p>
+      </div>
+      <div class="box_footer">
+        <p style="color: rgb(78, 0, 92); font-weight: 600;">Верстка:</p>
+        <p>Решетников П</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
